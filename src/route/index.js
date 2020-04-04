@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import home  from '../page/home/home';
+import login from "../page/login/login";
 class RouterIndex extends Component {
   render() {
     return (
       <HashRouter>
         <Switch>
-          <Route exact path="/" component={home} />
+          <Route exact path="/" component={login} />
         </Switch>
       </HashRouter>
     );

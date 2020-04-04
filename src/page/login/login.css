@@ -1,0 +1,47 @@
+.login-page {
+  padding: 8px 16px;
+}
+
+.word-welcome {
+  margin: 0 50px 0 190px;
+  font-family: fantasy;
+  font-size: 40px;
+}
+
+.word-title {
+  font-size: 50px;
+  font-family: unset;
+  font-weight: bold;
+}
+
+.main-img {
+  height: 700px;
+  float: left;
+}
+.main-body {
+  margin-left: 230px;
+  height: 650px;
+}
+.main-word {
+  text-align: right;
+}
+.login-form-wrap {
+  width: 600px;
+  margin: 100px 200px;
+}
+.login-form-title {
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.login-form {
+  background-color: rgb(196, 182, 207, 0.2);
+  padding: 40px 30px 20px 30px;
+  border-radius: 20px;
+}
+.footer {
+  line-height: 50px;
+  color: #551a8b;
+  text-align: right;
+}

@@ -1,5 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.clear-float::after {
+  /*只需要给浮动元素的父容器添加上这个类就可以了: clear_float*/
+  display: block; /*把::after设置成块级元素*/
+  content: ""; /*想让伪类起作用, 必须添加这个属性*/
+  clear: both;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
