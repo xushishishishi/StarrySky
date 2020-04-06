@@ -1,6 +1,8 @@
 import React from "react";
 import "./login.css";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, message } from "antd";
+import { createBrowserHistory } from "history";
+
 const imgUrl = require("../../asset/image/astronaut-balloon.png");
 const layout = {
   labelCol: { span: 8 },
@@ -10,6 +12,7 @@ const layout = {
 const tailLayout = {
   wrapperCol: { offset: 12, span: 12 }
 };
+const history = createBrowserHistory();
 export default class login extends React.Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
@@ -21,7 +24,9 @@ export default class login extends React.Component {
     const onFinish = values => {
       const { username, password } = values;
       if (username === "许许" && password === "2020") {
-        console.log("校验成功");
+        this.props.history.push("/home");
+      } else {
+        message.error("账号/密码错误，请重新输入");
       }
     };
     // 表单未通过校验
@@ -36,7 +41,7 @@ export default class login extends React.Component {
               <span className="word-title">❤许许2号</span>
             </div>
             <div className="login-form-wrap">
-              <div className="login-form-title">许许2号登陆</div>
+              <div className="login-form-title">欢迎乘坐许许2号</div>
               <div className="login-form">
                 <Form
                   {...layout}
@@ -72,7 +77,7 @@ export default class login extends React.Component {
 
                   <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
-                      登陆
+                      出发
                     </Button>
                   </Form.Item>
                 </Form>
